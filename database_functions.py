@@ -38,7 +38,7 @@ def connection_factory(environment):
     """
     This takes an environment variable and returns a cursor c and connection conn.
     """
-    conn=sqlite3.connect("{}_phoneBookProject2.db".format(environment))
+    conn=sqlite3.connect("static/db/{}_phoneBookProject2.db".format(environment))
     c=conn.cursor()
     return c, conn
 

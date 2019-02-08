@@ -1,8 +1,10 @@
 {% extends "index.html" %}
 {% block content %}
-    <h1>{{title}}</h1>
-    <p>{{result}}</p>
-    <p>Email: {{email}}</p>
-    <p>{{form_data}}</p>
-    <P> THIS IS THE TYPE : {{type_form}}</p>
+    <h1>This are your search results:</h1>
+    <p>
+      {{business_type}} {{cursor}} {{checked_business_type}} {{postcode}} {{long1}} {{lat1}}
+          {{businesses_info_list}} {{businesses_info_list_with_distance}} {{result}}
+      </p>
+    <p> {{sorted_result}}</p>
+
 {% endblock %}

@@ -51,7 +51,18 @@
     <div class="row">
       <div class="col-lg-12 text-center">
         <h1 class="mt-5">Find a business</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div id="contact-form">
+      <form method="post" action="/search_results">
+          <label for="business_type">Business type:</label>
+          <input type="text" id="business_type" name="business_type" required="required">
 
+          <label for="postcode">Postcode:</label>
+          <input type="text" id="postcode" name="postcode" required="required">
+          <input type="submit" id="submit-button" name="submit" value="Search" >
+      </form>
       </div>
     </div>
   </div>
