@@ -44,7 +44,7 @@ def get_coordinates_for_postcode(postcode):
                 print("The postcode you provided is not valid!")
 def get_information_for_businesses_with_input_business_type(cursor,business_type):
 
-    cursor.execute("SELECT business_name, telephone_number, postcode FROM businesses WHERE business_category=?", (business_type,))
+    cursor.execute("SELECT business_name, telephone_number, postcode,adress_line_1,adress_line_2,adress_line_3 FROM businesses WHERE business_category=?", (business_type,))
     results = cursor.fetchall()
     businesses_info_list=[]
 #    print(results)
@@ -69,8 +69,8 @@ def distance(businesses_info_list,long1,lat1):
 
 
     for index in range(len(businesses_info_list)-1):
-        long2=businesses_info_list[index][3]
-        lat2=businesses_info_list[index][4]
+        long2=businesses_info_list[index][6]
+        lat2=businesses_info_list[index][7]
         R = 6373.0 # approximate radius of earth in km
 
         dlon, dlat = radians(long2) - radians(long1), radians(lat2) - radians(lat1)

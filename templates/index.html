@@ -53,24 +53,27 @@
         <h1 class="mt-5">Find a business</h1>
       </div>
     </div>
-    <div class="row">
+    <div class="row justify-content-center">
       <div id="contact-form">
       <form method="post" action="/search_results">
           <label for="business_type">Business type:</label>
           <input type="text" id="business_type" name="business_type" required="required">
 
           <label for="postcode">Postcode:</label>
-          <input type="text" id="postcode" name="postcode" required="required">
-          <input type="submit" id="submit-button" name="submit" value="Search" >
+          <input class="ml-3" type="text" id="postcode" name="postcode" required="required">
+          <input class= "btn btn-primary ml-3" type="submit" id="submit-button " name="submit" value="Search" >
       </form>
       </div>
     </div>
   </div>
 
 
-<div>
-  {% block content %}
-  {% endblock %}
+<div class="container">
+
+    {% block content %}
+    {% endblock %}
+
+
 </div>
 
 

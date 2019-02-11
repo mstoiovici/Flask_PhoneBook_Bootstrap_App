@@ -30,6 +30,8 @@ def search_results():
         businesses_info_list_with_distance=distance(businesses_info_list,long1,lat1)
         result=convert_businesses_info_list_into_dictionary(businesses_info_list_with_distance)
         sorted_result=sort_result_by_distance(result)
+
+        
     return render_template("search_results.html", **locals())
 
 
