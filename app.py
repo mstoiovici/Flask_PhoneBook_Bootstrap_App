@@ -24,14 +24,15 @@ def search_results():
         if business_type:
             checked_business_type=check_if_input_business_type_is_in_database(cursor,business_type.title())
 
+
         postcode=form_data["postcode"]
         long1,lat1=get_coordinates_for_postcode(postcode)
-        businesses_info_list=get_information_for_businesses_with_input_business_type(cursor,checked_business_type)
-        businesses_info_list_with_distance=distance(businesses_info_list,long1,lat1)
+        muna=get_information_for_businesses_with_input_business_type(cursor,checked_business_type)
+        businesses_info_list_with_distance=distance(muna,long1,lat1)
         result=convert_businesses_info_list_into_dictionary(businesses_info_list_with_distance)
         sorted_result=sort_result_by_distance(result)
 
-        
+
     return render_template("search_results.html", **locals())
 
 

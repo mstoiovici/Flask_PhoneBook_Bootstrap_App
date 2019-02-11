@@ -7,18 +7,18 @@
   </div>
 <div class="row" id="results">
   {% for item in sorted_result %}
-  <div class="col-md-4">
+  <div class="col-md-4 border">
     <p>
-      Company name: <em>{{item[0]}}</em>
+      <strong>Company name: </strong>{{item[0]}}
       </p>
     <p>
-      Telephone no.: {{item[1][0]}}
+      <strong>Telephone no.:</strong> {{item[1][0]}}
       </p>
       <p>
-        Address: {{item[1][2]}}
+        <strong>Address:</strong> {{item[1][2]}}
         </p>
         <p>
-          Distance in miles: {{item[1][-1]}}
+          <strong>Distance in miles: </strong>{{item[1][-1]}}
           </p>
 
     </div>
