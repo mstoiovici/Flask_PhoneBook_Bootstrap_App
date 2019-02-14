@@ -58,8 +58,6 @@ def people_results():
         business_type = form_data["business_type"]
         if business_type:
             checked_business_type=check_if_input_business_type_is_in_database(cursor,business_type.title())
-
-
         postcode=form_data["postcode"]
         long1,lat1=get_coordinates_for_postcode(postcode)
         muna=get_information_for_businesses_with_input_business_type(cursor,checked_business_type)
@@ -72,3 +70,6 @@ def people_results():
 
 if __name__=="__main__":
     app.run(debug=True)
+
+
+  
