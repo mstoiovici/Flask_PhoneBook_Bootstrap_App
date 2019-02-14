@@ -157,4 +157,4 @@ def get_info_for_name_and_country(environment,cursor,alpha,beta):
     return results
 
 
-main("mariana")
+#main("mariana")
